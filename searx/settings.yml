@@ -4,8 +4,8 @@ general:
 
 search:
     safe_search : 0 # Filter results. 0: None, 1: Moderate, 2: Strict
-    autocomplete : "" # Existing autocomplete backends: "dbpedia", "duckduckgo", "google", "startpage", "wikipedia" - leave blank to turn it off by default
-    language : "en-US"
+    autocomplete : "duckduckgo" # Existing autocomplete backends: "dbpedia", "duckduckgo", "google", "startpage", "wikipedia" - leave blank to turn it off by default
+    language : "fr"
     ban_time_on_fail : 5 # ban time in seconds after engine errors
     max_ban_time_on_fail : 120 # max ban time in seconds after engine errors
 
@@ -87,18 +87,22 @@ engines:
     engine : wikipedia
     shortcut : wp
     base_url : 'https://{language}.wikipedia.org/'
+    disabled: True
 
   - name : bing
     engine : bing
     shortcut : bi
+    disabled: True
 
   - name : bing images
     engine : bing_images
     shortcut : bii
+    disabled: True
 
   - name : bing news
     engine : bing_news
     shortcut : bin
+    disabled: True
 
   - name : bing videos
     engine : bing_videos
@@ -145,6 +149,7 @@ engines:
     engine : currency_convert
     categories : general
     shortcut : cc
+    disabled: True
 
   - name : deezer
     engine : deezer
@@ -190,11 +195,12 @@ engines:
     shortcut : wd
     timeout : 3.0
     weight : 2
+    disabled: True
 
   - name : duckduckgo
     engine : duckduckgo
     shortcut : ddg
-    disabled : True
+    disabled : False
 
   - name : duckduckgo images
     engine : duckduckgo_images
@@ -289,18 +295,22 @@ engines:
   - name : google
     engine : google
     shortcut : go
+    disabled: False
 
   - name : google images
     engine : google_images
     shortcut : goi
+    disabled: True
 
   - name : google news
     engine : google_news
     shortcut : gon
+    disabled: True
 
   - name : google videos
     engine : google_videos
     shortcut : gov
+    disabled: True
 
   - name : google scholar
     engine : xpath
@@ -315,6 +325,7 @@ engines:
     first_page_num : 0
     categories : science
     shortcut : gos
+    disabled: True
 
   - name : google play apps
     engine : xpath
@@ -387,6 +398,7 @@ engines:
     page_size : 20
     categories : it
     shortcut : ho
+    disabled: True
 
   - name : ina
     engine : ina
@@ -404,7 +416,7 @@ engines:
     engine : kickass
     shortcut : kc
     timeout : 4.0
-    disabled : True
+    disabled : False
 
   - name : library genesis
     engine : xpath
@@ -426,11 +438,13 @@ engines:
     content_xpath : .//a[@class="domain"]
     categories : it
     shortcut : lo
+    disabled: True
 
   - name : microsoft academic
     engine : microsoft_academic
     categories : science
     shortcut : ma
+    disabled: True
 
   - name : mixcloud
     engine : mixcloud
@@ -517,6 +531,7 @@ engines:
     shortcut : tpb
     url: https://pirateproxy.red/
     timeout : 3.0
+    disabled: False
 
   - name : pubmed
     engine : pubmed
@@ -528,12 +543,13 @@ engines:
     engine : qwant
     shortcut : qw
     categories : general
-    disabled : True
+    disabled : False
 
   - name : qwant images
     engine : qwant
     shortcut : qwi
     categories : images
+    disabled : False
 
   - name : qwant news
     engine : qwant
@@ -568,6 +584,7 @@ engines:
   - name : searchcode doc
     engine : searchcode_doc
     shortcut : scd
+    disabled: True
 
   - name : searchcode code
     engine : searchcode_code
@@ -658,6 +675,7 @@ engines:
   - name : yahoo news
     engine : yahoo_news
     shortcut : yhn
+    disabled : True
 
   - name : youtube
     shortcut : yt
@@ -689,6 +707,7 @@ engines:
   - name : dictzone
     engine : dictzone
     shortcut : dc
+    disabled: True
 
   - name : mymemory translated
     engine : translated
